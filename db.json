@@ -1,0 +1,127 @@
+{
+    "nav": [
+        {
+            "title": "Бургери",
+            "img": "images/main/select/cheeseburger_icon.svg"
+        },
+        {
+            "title": "Закуски",
+            "img": "images/main/select/onion_icon.svg"
+        },
+        {
+            "title": "Хот-доги",
+            "img": "images/main/select/hotdog_icon.svg"
+        },
+        {
+            "title": "Комбо",
+            "img": "images/main/select/fast-food_icon.svg"
+        },
+        {
+            "title": "Шаурма",
+            "img": "images/main/select/burrito_icon.svg"
+        },
+        {
+            "title": "Піца",
+            "img": "images/main/select/pizza_icon.svg"
+        },
+        {
+            "title": "Вок",
+            "img": "images/main/select/noodles_icon.svg"
+        },
+        {
+            "title": "Десерти",
+            "img": "images/main/select/doughnut_icon.svg"
+        },
+        {
+            "title": "Соуси",
+            "img": "images/main/select/ketchup_icon.svg"
+        }
+    ],
+    "menu": [
+        {
+            "name": "Бургери",
+            "items": [
+                {
+                    "img_src": "images/main/menu/burgers/meat_bomb.png",
+                    "price": "689₴",
+                    "name": "М'ясна бомба",
+                    "weight": "520г"
+                },
+                {
+                    "img_src": "images/main/menu/burgers/super_chease.png",
+                    "price": "550₴",
+                    "name": "Супер сирний",
+                    "weight": "512г"
+                },
+                {
+                    "img_src": "images/main/menu/burgers/satisfying.png",
+                    "price": "639₴",
+                    "name": "Ситний",
+                    "weight": "580г"
+                },
+                {
+                    "img_src": "images/main/menu/burgers/heavy_punch.png",
+                    "price": "480₴",
+                    "name": "Важкий удар",
+                    "weight": "470г"
+                },
+                {
+                    "img_src": "images/main/menu/burgers/eternal_classic.png",
+                    "price": "450₴",
+                    "name": "Вічна класика",
+                    "weight": "450г"
+                },
+                {
+                    "img_src": "images/main/menu/burgers/italian.png",
+                    "price": "560₴",
+                    "name": "Італійський",
+                    "weight": "510г"
+                }
+            ]
+        },
+        {
+            "name": "Закуски",
+            "items": [
+                {
+                    "img_src": "images/main/menu/snacks/nachos.png",
+                    "price": "250₴",
+                    "name": "Начос",
+                    "weight": "220г"
+                },
+                {
+                    "img_src": "images/main/menu/snacks/french_fries.png",
+                    "price": "245₴",
+                    "name": "Картопля фрі",
+                    "weight": "180г"
+                },
+                {
+                    "img_src": "images/main/menu/snacks/onion_rings.png",
+                    "price": "230₴",
+                    "name": "Лукові кільця",
+                    "weight": "160г"
+                }
+            ]
+        },
+        {
+            "name": "Хот-доги"
+        },
+        {
+            "name": "Комбо"
+        },
+        {
+            "name": "Шаурма"
+        },
+        {
+            "name": "Піца"
+        },
+        {
+            "name": "Вок"
+        },
+        {
+            "name": "Десерти"
+        },
+        {
+            "name": "Соуси"
+        }
+    ]
+}

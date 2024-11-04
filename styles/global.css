@@ -1,0 +1,26 @@
+:root {
+    --hover-color: #FFAB08;
+    --default-color: #FF7020;
+    --header-color: #FF5C00;
+    --hover-menu: #F86310;
+    --weight-color: #B1B1B1;
+    --bg-color: #F9F9F9;
+    --white-color: #FFFFFF;
+    --text-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+}

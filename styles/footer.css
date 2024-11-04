@@ -1,0 +1,58 @@
+.footer {
+    background-color: var(--white-color);
+}
+
+.footer_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 51px 75px 40px;
+}
+
+.footer_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_description {
+    display: flex;
+    gap: 126px;
+}
+
+.footer_telephone {
+    display: flex;
+    gap: 1.5px;
+}
+
+.footer_delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer_social {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.social_icon {
+    display: flex;
+    gap: 16px;
+}
+
+.social_icon a img {
+    display: block;
+}
+
+.footer_header {
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.copyright {
+    font-size: 12px;
+    line-height: 130%;
+}
