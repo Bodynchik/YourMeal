@@ -21,7 +21,10 @@
         <div class="circle"></div>
         <div><img class="img header_logo" src="images/header/logo.svg" alt="logo"></div>
         <div class="hero">
-            <img class="hero_img" src="images/header/header_pic.svg" alt="hero picture">
+            <picture>
+                <source media="(max-width: 900px)" srcset="images/header/header-pic-768.svg">
+                <img class="hero_img" src="images/header/header-pic-1920.svg" alt="hero picture">
+            </picture>
             <div class="hero_description">
                 <h1 class="h hero_h1">Смачні бургери<br><span class="color_h1">на будь-який смак!</span></h1>
                 <p class="p hero_p">Безкоштовна доставка від 300&#8372;</p>
@@ -31,14 +34,14 @@
 
     <main class="main">
         <div class="main_wrapper">
-            <nav class="nav">
-                <ul class="nav_container"></ul>
-            </nav>
+            <nav class="nav"></nav>
             <section class="section_menu">
-                <h2 class="h menu_header"></h2>
                 <div class="section_container">
                     <div class="basket">Кошик</div>
-                    <div class="menu_container"></div>
+                    <div class="menu_container">
+                        <h2 class="h menu_header"></h2>
+                        <div class="cards_container"></div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -47,7 +50,12 @@
     <footer class="footer">
         <div class="footer_wrapper">
             <div class="footer_info">
-                <div><img src="images/footer/logo.svg" alt="logo"></div>
+                <div>
+                    <picture>
+                        <source media="(max-width: 900px)" srcset="images/footer/logo-768.svg">
+                        <img src="images/footer/logo-1920.svg" alt="logo">
+                    </picture>
+                </div>
                 <div class="footer_description">
                     <div class="footer_delivery">
                         <h3 class="h footer_header">Номер для замовлення</h3>

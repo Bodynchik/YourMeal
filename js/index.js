@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function getNavList() {
         const data = await getResource('http://localhost:3000/nav');
-        const list = document.querySelector('.nav_container');
+        const list = document.querySelector('.nav');
 
         data.forEach(item => {
             const { title, img } = item,
-                listItem = document.createElement('li');
+                listItem = document.createElement('button');
 
             listItem.classList.add('nav_item');
             listItem.innerHTML = `<img src=${img}>${title}`;
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const navList = document.querySelectorAll('.nav_item');
             navList.forEach((item, index) => {
                 item.addEventListener('click', () => {
-                    const menuContainer = document.querySelector('.menu_container');
-                    menuContainer.innerHTML = '';
+                    const cardsContainer = document.querySelector('.cards_container');
+                    cardsContainer.innerHTML = '';
 
                     hideNavItem(navList);
                     showNavItem(navList, index);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                             <p class="p card_weight">${weight}</p>
                                             <button class="button card_button">Додати</button>
                                     `;
-                                    menuContainer.append(divItem);
+                                    cardsContainer.append(divItem);
                                 }
                             }
                         });

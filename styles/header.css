@@ -36,15 +36,55 @@
 
 .hero_h1 {
     font-weight: 800;
-    font-size: 50px;
+    font-size: clamp(36px, -0.375rem + 5.47vw, 50px);
     line-height: 120%;
 }
 
 .hero_p {
-    font-size: 16px;
+    font-size: clamp(12px, 1.56vw, 16px);
     line-height: 120%;
 }
 
 .color_h1 {
     color: var(--header-color);
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero_description {
+        gap: 26px;
+        padding: 27px 0 74px;
+    }
+
+    .header {
+        padding: 24px 0 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_h1 {
+        font-size: clamp(30px, 1.607rem + 1.34vw, 36px);
+    }
+}
+
+@media (max-width: 550px) {
+    .hero {
+        flex-direction: column-reverse;
+        gap: 19px;
+    }
+
+    .hero_description {
+        padding: 0;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .header {
+        padding: 24px 0 30px;
+    }
 }

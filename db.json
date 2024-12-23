@@ -42,37 +42,37 @@
             "name": "Бургери",
             "items": [
                 {
-                    "img_src": "images/main/menu/burgers/meat_bomb.png",
+                    "img_src": "images/main/menu/burgers/meat-bomb.jpg",
                     "price": "689₴",
                     "name": "М'ясна бомба",
                     "weight": "520г"
                 },
                 {
-                    "img_src": "images/main/menu/burgers/super_chease.png",
+                    "img_src": "images/main/menu/burgers/super-chease.jpg",
                     "price": "550₴",
                     "name": "Супер сирний",
                     "weight": "512г"
                 },
                 {
-                    "img_src": "images/main/menu/burgers/satisfying.png",
+                    "img_src": "images/main/menu/burgers/satisfying.jpg",
                     "price": "639₴",
                     "name": "Ситний",
                     "weight": "580г"
                 },
                 {
-                    "img_src": "images/main/menu/burgers/heavy_punch.png",
+                    "img_src": "images/main/menu/burgers/heavy-punch.jpg",
                     "price": "480₴",
                     "name": "Важкий удар",
                     "weight": "470г"
                 },
                 {
-                    "img_src": "images/main/menu/burgers/eternal_classic.png",
+                    "img_src": "images/main/menu/burgers/eternal-classic.jpg",
                     "price": "450₴",
                     "name": "Вічна класика",
                     "weight": "450г"
                 },
                 {
-                    "img_src": "images/main/menu/burgers/italian.png",
+                    "img_src": "images/main/menu/burgers/italian.jpg",
                     "price": "560₴",
                     "name": "Італійський",
                     "weight": "510г"
@@ -83,19 +83,19 @@
             "name": "Закуски",
             "items": [
                 {
-                    "img_src": "images/main/menu/snacks/nachos.png",
+                    "img_src": "images/main/menu/snacks/nachos.jpg",
                     "price": "250₴",
                     "name": "Начос",
                     "weight": "220г"
                 },
                 {
-                    "img_src": "images/main/menu/snacks/french_fries.png",
+                    "img_src": "images/main/menu/snacks/french-fries.jpg",
                     "price": "245₴",
                     "name": "Картопля фрі",
                     "weight": "180г"
                 },
                 {
-                    "img_src": "images/main/menu/snacks/onion_rings.png",
+                    "img_src": "images/main/menu/snacks/onion-rings.jpg",
                     "price": "230₴",
                     "name": "Лукові кільця",
                     "weight": "160г"
