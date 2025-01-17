@@ -27,7 +27,7 @@
             </picture>
             <div class="hero_description">
                 <h1 class="h hero_h1">Смачні бургери<br><span class="color_h1">на будь-який смак!</span></h1>
-                <p class="p hero_p">Безкоштовна доставка від 300&#8372;</p>
+                <p class="p hero_p"></p>
             </div>
         </div>
     </header>
@@ -37,7 +37,26 @@
             <nav class="nav"></nav>
             <section class="section_menu">
                 <div class="section_container">
-                    <div class="basket">Кошик</div>
+                    <div class="basket">
+                        <div class="basket__hero">
+                            <h4 class="h basket__header">Кошик</h4>
+                            <div class="basket__total">0</div>
+                        </div>
+                        <div class="basket__details">
+                            <div class="basket__goods"></div>
+                            <div class="basket__order-hide">
+                                <div class="basket__order-price">
+                                    <p class="p">До оплати</p>
+                                    <p class="p price_field"></p>
+                                </div>
+                                <button class="button basket__order-button">Оформити замовлення</button>
+                            </div>
+                            <div class="basket__free-hide">
+                                <img src="images/main/modal/free-icon-delivery.svg" alt="free delivery icon">
+                                <p class="p ">Безкоштовна доставка</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="menu_container">
                         <h2 class="h menu_header"></h2>
                         <div class="cards_container"></div>
@@ -67,10 +86,20 @@
                     <div class="footer_social">
                         <h3 class="h footer_header">Ми у соцмережах</h3>
                         <div class="social_icon">
-                            <a href="https://www.instagram.com/"><img src="images/footer/instagram_icon.svg"
-                                    alt="instagram icon"></a>
-                            <a href="https://www.facebook.com/"><img src="images/footer/facebook_icon.svg"
-                                    alt="facebook icon"></a>
+                            <a href="https://www.instagram.com/">
+                                <svg class="icon" fill="#FD7E14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="32px"
+                                    height="32px">
+                                    <path
+                                        d="M 7.546875 0 C 3.390625 0 0 3.390625 0 7.546875 L 0 18.453125 C 0 22.609375 3.390625 26 7.546875 26 L 18.453125 26 C 22.609375 26 26 22.609375 26 18.453125 L 26 7.546875 C 26 3.390625 22.609375 0 18.453125 0 Z M 7.546875 2 L 18.453125 2 C 21.527344 2 24 4.46875 24 7.546875 L 24 18.453125 C 24 21.527344 21.53125 24 18.453125 24 L 7.546875 24 C 4.472656 24 2 21.53125 2 18.453125 L 2 7.546875 C 2 4.472656 4.46875 2 7.546875 2 Z M 20.5 4 C 19.671875 4 19 4.671875 19 5.5 C 19 6.328125 19.671875 7 20.5 7 C 21.328125 7 22 6.328125 22 5.5 C 22 4.671875 21.328125 4 20.5 4 Z M 13 6 C 9.144531 6 6 9.144531 6 13 C 6 16.855469 9.144531 20 13 20 C 16.855469 20 20 16.855469 20 13 C 20 9.144531 16.855469 6 13 6 Z M 13 8 C 15.773438 8 18 10.226563 18 13 C 18 15.773438 15.773438 18 13 18 C 10.226563 18 8 15.773438 8 13 C 8 10.226563 10.226563 8 13 8 Z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <svg class="icon" fill="#FD7E14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    width="32px" height="32px">
+                                    <path
+                                        d="M8,0C3.582,0,0,3.582,0,8c0,4.01,2.954,7.321,6.803,7.901V10.12H4.824V8.016h1.979V6.618c0-2.317,1.13-3.334,3.054-3.334	c0.923,0,1.411,0.069,1.641,0.099v1.836h-1.312c-0.817,0-1.104,0.775-1.104,1.65v1.148h2.396l-0.326,2.104H9.082v5.798l0,0.001	C12.987,15.389,16,12.05,16,8C16,3.582,12.418,0,8,0z" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -78,6 +107,78 @@
             <p class="p copyright">© YourMeal, 2024</p>
         </div>
     </footer>
+
+    <div id="dynamic-modal" class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content modal__content-padding modal__content-flex">
+                <div class="modal__content-wrap">
+                    <img src="images/main/modal/modal-close.svg" class="modal__close">
+                    <h3 class="h modal__header"></h3>
+                    <div class="goods__info">
+                        <img src="images/main/menu/burgers/eternal-classic.jpg" class="goods__image">
+                        <div class="goods__text">
+                            <p class="p goods__description"></p>
+                            <p class="p goods__compound">Склад:</p>
+                            <ul class="goods__compound-list">
+                            </ul>
+                            <p class="p goods__weight"></p>
+                        </div>
+                    </div>
+                    <div class="model__add">
+                        <div class="goods__add">
+                            <button class="button add_button">Додати</button>
+                            <div class="goods__counter">
+                                <span class="goods__minus">-</span>
+                                <span class="goods__total"></span>
+                                <span class="goods__plus">+</span>
+                            </div>
+                        </div>
+                        <p class="p goods__price"></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="static-modal" class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content modal__content-flex">
+                <img src="images/main/modal/modal-close.svg" class="modal__close">
+                <div class="modal__donut-block"><img src="images/main/modal/donut.svg"></div>
+                <div class="modal__delivery-block">
+                    <h3 class="h modal__static-header">Доставка</h3>
+                    <form action="#">
+                        <div class="info__block">
+                            <input class="input" type="text" required placeholder="Ваше ім'я" name="name">
+                            <input class="input" type="tel" required placeholder="Номер телефону" name="telephone">
+                        </div>
+                        <div class="radio__block radio__block-mb">
+
+                            <label class="radio__label">
+                                <input class="input-radio" type="radio" name="delivery" value="Самовивіз" checked>
+                                <span>Самовивіз</span>
+                            </label>
+
+
+                            <label class="radio__label">
+                                <input class="input-radio" type="radio" name="delivery" value="Доставка">
+                                <span>Доставка</span>
+                            </label>
+
+                        </div>
+                        <div class="address__block hide">
+                            <input class="input" type="text" placeholder="Вулиця" name="street">
+                            <input class="input" type="text" placeholder="Будинок" name="house">
+                            <input class="input" type="text" placeholder="Квартира" name="apartment">
+                            <input class="input" type="text" placeholder="Поверх" name="floor">
+                        </div>
+                        <button class="button order__button">Оформити</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/index.js"></script>
 </body>

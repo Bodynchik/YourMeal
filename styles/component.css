@@ -6,13 +6,112 @@
     display: block;
 }
 
+.social_icon > a {
+    height: 32px;
+    width: 32px;
+}
+
+.icon {
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover {
+    fill: var(--hover-color)
+}
+
 .button {
-    padding: 0;
+    padding: 12px 0px;
     border: none;
-    font-size: 16px;
+    font-size: clamp(12px, 1.56vw, 16px);
     line-height: 100%;
     border-radius: 12px;
     font-family: "Nunito", sans-serif;
     font-style: normal;
     font-weight: 400;
+    cursor: pointer;
+    outline: none;
+}
+
+.input {
+    font-size: clamp(10px, 0.25rem + 0.78vw, 12px);
+    padding: 12px;
+    border: 1px solid var(--default-btn);
+    border-radius: 12px;
+    line-height: 130%;
+    height: 40px;
+    width: 100%;
+    transition: border 0.3s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-radio {
+    display: none;
+}
+
+.input-radio + span {
+    position: relative;
+    padding-left: 20px;
+}
+
+.input-radio + span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(0px, -50%);
+    width: 12px;
+    height: 12px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid var(--default-btn);
+    background-color: var(--white-color);
+}
+
+.input-radio + span::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(3px, -50%);
+    border-radius: 50%;
+    background-color: var(--text-color);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.input-radio:checked + span::after {
+    opacity: 1;
+}
+
+.input:focus {
+    border: 1px solid var(--hover-color);
+}
+
+.input::placeholder {
+    font-size: clamp(10px, 0.25rem + 0.78vw, 12px);
+    line-height: 130%;
+    color: var(--weight-color);
+}
+
+@media (hover: hover) {
+    .input:hover {
+        border: 1px solid var(--hover-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 9px 0px;
+        border-radius: 8px;
+    }
+
+    .input {
+        padding: 8.5px 12px;
+        border-radius: 8px;
+        height: 30px;
+    }
 }

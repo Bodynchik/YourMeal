@@ -1,127 +1,149 @@
 {
-    "nav": [
+  "nav": [
+    {
+      "title": "Бургери",
+      "img": "images/main/select/cheeseburger_icon.svg"
+    },
+    {
+      "title": "Закуски",
+      "img": "images/main/select/onion_icon.svg"
+    },
+    {
+      "title": "Хот-доги",
+      "img": "images/main/select/hotdog_icon.svg"
+    },
+    {
+      "title": "Комбо",
+      "img": "images/main/select/fast-food_icon.svg"
+    },
+    {
+      "title": "Шаурма",
+      "img": "images/main/select/burrito_icon.svg"
+    },
+    {
+      "title": "Піца",
+      "img": "images/main/select/pizza_icon.svg"
+    },
+    {
+      "title": "Вок",
+      "img": "images/main/select/noodles_icon.svg"
+    },
+    {
+      "title": "Десерти",
+      "img": "images/main/select/doughnut_icon.svg"
+    },
+    {
+      "title": "Соуси",
+      "img": "images/main/select/ketchup_icon.svg"
+    }
+  ],
+  "menu": [
+    {
+      "name": "Бургери",
+      "items": [
         {
-            "title": "Бургери",
-            "img": "images/main/select/cheeseburger_icon.svg"
+          "img_src": "images/main/menu/burgers/meat-bomb.jpg",
+          "price": "207₴",
+          "name": "М'ясна бомба",
+          "weight": "520",
+          "calories": "430",
+          "composition": [
+            "Пшенична булочка",
+            "Котлета з яловичини",
+            "Червона цибуля",
+            "Листя салату",
+            "Соус гірчичний"
+          ],
+          "description": "Супер м'ясна насолода! Велика рубана котлета зі свіжого яловичого м'яса підкорить вас своєю соковитістю, а хрумке листя салату додасть свіжості."
         },
         {
-            "title": "Закуски",
-            "img": "images/main/select/onion_icon.svg"
+          "img_src": "images/main/menu/burgers/super-chease.jpg",
+          "price": "209₴",
+          "name": "Супер сирний",
+          "weight": "512",
+          "calories": "480",
+          "composition": [
+            "Пшенична булочка",
+            "Котлета з яловичини",
+            "Сир Чеддер",
+            "Мариновані огірки",
+            "Гірчиця"
+          ]
         },
         {
-            "title": "Хот-доги",
-            "img": "images/main/select/hotdog_icon.svg"
+          "img_src": "images/main/menu/burgers/satisfying.jpg",
+          "price": "189₴",
+          "name": "Ситний",
+          "weight": "580",
+          "calories": "530"
         },
         {
-            "title": "Комбо",
-            "img": "images/main/select/fast-food_icon.svg"
+          "img_src": "images/main/menu/burgers/heavy-punch.jpg",
+          "price": "140₴",
+          "name": "Важкий удар",
+          "weight": "470",
+          "calories": "510"
         },
         {
-            "title": "Шаурма",
-            "img": "images/main/select/burrito_icon.svg"
+          "img_src": "images/main/menu/burgers/eternal-classic.jpg",
+          "price": "122₴",
+          "name": "Вічна класика",
+          "weight": "450",
+          "calories": "380"
         },
         {
-            "title": "Піца",
-            "img": "images/main/select/pizza_icon.svg"
-        },
-        {
-            "title": "Вок",
-            "img": "images/main/select/noodles_icon.svg"
-        },
-        {
-            "title": "Десерти",
-            "img": "images/main/select/doughnut_icon.svg"
-        },
-        {
-            "title": "Соуси",
-            "img": "images/main/select/ketchup_icon.svg"
+          "img_src": "images/main/menu/burgers/italian.jpg",
+          "price": "180₴",
+          "name": "Італійський",
+          "weight": "510",
+          "calories": "490"
         }
-    ],
-    "menu": [
+      ]
+    },
+    {
+      "name": "Закуски",
+      "items": [
         {
-            "name": "Бургери",
-            "items": [
-                {
-                    "img_src": "images/main/menu/burgers/meat-bomb.jpg",
-                    "price": "689₴",
-                    "name": "М'ясна бомба",
-                    "weight": "520г"
-                },
-                {
-                    "img_src": "images/main/menu/burgers/super-chease.jpg",
-                    "price": "550₴",
-                    "name": "Супер сирний",
-                    "weight": "512г"
-                },
-                {
-                    "img_src": "images/main/menu/burgers/satisfying.jpg",
-                    "price": "639₴",
-                    "name": "Ситний",
-                    "weight": "580г"
-                },
-                {
-                    "img_src": "images/main/menu/burgers/heavy-punch.jpg",
-                    "price": "480₴",
-                    "name": "Важкий удар",
-                    "weight": "470г"
-                },
-                {
-                    "img_src": "images/main/menu/burgers/eternal-classic.jpg",
-                    "price": "450₴",
-                    "name": "Вічна класика",
-                    "weight": "450г"
-                },
-                {
-                    "img_src": "images/main/menu/burgers/italian.jpg",
-                    "price": "560₴",
-                    "name": "Італійський",
-                    "weight": "510г"
-                }
-            ]
+          "img_src": "images/main/menu/snacks/nachos.jpg",
+          "price": "250₴",
+          "name": "Начос",
+          "weight": "220"
         },
         {
-            "name": "Закуски",
-            "items": [
-                {
-                    "img_src": "images/main/menu/snacks/nachos.jpg",
-                    "price": "250₴",
-                    "name": "Начос",
-                    "weight": "220г"
-                },
-                {
-                    "img_src": "images/main/menu/snacks/french-fries.jpg",
-                    "price": "245₴",
-                    "name": "Картопля фрі",
-                    "weight": "180г"
-                },
-                {
-                    "img_src": "images/main/menu/snacks/onion-rings.jpg",
-                    "price": "230₴",
-                    "name": "Лукові кільця",
-                    "weight": "160г"
-                }
-            ]
+          "img_src": "images/main/menu/snacks/french-fries.jpg",
+          "price": "245₴",
+          "name": "Картопля фрі",
+          "weight": "180"
         },
         {
-            "name": "Хот-доги"
-        },
-        {
-            "name": "Комбо"
-        },
-        {
-            "name": "Шаурма"
-        },
-        {
-            "name": "Піца"
-        },
-        {
-            "name": "Вок"
-        },
-        {
-            "name": "Десерти"
-        },
-        {
-            "name": "Соуси"
+          "img_src": "images/main/menu/snacks/onion-rings.jpg",
+          "price": "230₴",
+          "name": "Лукові кільця",
+          "weight": "160"
         }
-    ]
+      ]
+    },
+    {
+      "name": "Хот-доги"
+    },
+    {
+      "name": "Комбо"
+    },
+    {
+      "name": "Шаурма"
+    },
+    {
+      "name": "Піца"
+    },
+    {
+      "name": "Вок"
+    },
+    {
+      "name": "Десерти"
+    },
+    {
+      "name": "Соуси"
+    }
+  ],
+  "requests": []
 }
