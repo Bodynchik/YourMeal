@@ -3,7 +3,9 @@
 }
 
 .img {
-    display: block;
+    border-radius: 12px;
+    aspect-ratio: 69 / 55;
+    object-fit: cover;
 }
 
 .social_icon > a {

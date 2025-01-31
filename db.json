@@ -2,39 +2,48 @@
   "nav": [
     {
       "title": "Бургери",
-      "img": "images/main/select/cheeseburger_icon.svg"
+      "img": "images/main/select/cheeseburger_icon.svg",
+      "id": "483c"
     },
     {
       "title": "Закуски",
-      "img": "images/main/select/onion_icon.svg"
+      "img": "images/main/select/onion_icon.svg",
+      "id": "5138"
     },
     {
       "title": "Хот-доги",
-      "img": "images/main/select/hotdog_icon.svg"
+      "img": "images/main/select/hotdog_icon.svg",
+      "id": "4446"
     },
     {
       "title": "Комбо",
-      "img": "images/main/select/fast-food_icon.svg"
+      "img": "images/main/select/fast-food_icon.svg",
+      "id": "785d"
     },
     {
       "title": "Шаурма",
-      "img": "images/main/select/burrito_icon.svg"
+      "img": "images/main/select/burrito_icon.svg",
+      "id": "fc42"
     },
     {
       "title": "Піца",
-      "img": "images/main/select/pizza_icon.svg"
+      "img": "images/main/select/pizza_icon.svg",
+      "id": "ebde"
     },
     {
       "title": "Вок",
-      "img": "images/main/select/noodles_icon.svg"
+      "img": "images/main/select/noodles_icon.svg",
+      "id": "1b43"
     },
     {
       "title": "Десерти",
-      "img": "images/main/select/doughnut_icon.svg"
+      "img": "images/main/select/doughnut_icon.svg",
+      "id": "59ad"
     },
     {
       "title": "Соуси",
-      "img": "images/main/select/ketchup_icon.svg"
+      "img": "images/main/select/ketchup_icon.svg",
+      "id": "91af"
     }
   ],
   "menu": [
@@ -64,41 +73,77 @@
           "calories": "480",
           "composition": [
             "Пшенична булочка",
-            "Котлета з яловичини",
+            "Котлети з яловичини",
             "Сир Чеддер",
             "Мариновані огірки",
             "Гірчиця"
-          ]
+          ],
+          "description": "Два біфштекси із натуральної яловичини, три слайси сиру «Чедер», два шматочки маринованого огірка та свіжа цибуля, заправлені гірчицею та кетчупом, у булочці з пшеничного борошна."
         },
         {
           "img_src": "images/main/menu/burgers/satisfying.jpg",
           "price": "189₴",
           "name": "Ситний",
           "weight": "580",
-          "calories": "530"
+          "calories": "530",
+          "composition": [
+            "Пшенична булочка",
+            "Котлета з яловичини",
+            "Сир Чеддер",
+            "Мариновані огірки",
+            "Бекон"
+          ],
+          "description": "Соковитий біфштекс із яловичини, доповнений хрумким беконом і маринованим огірком, у поєднанні зі шматочком сиру «Чедер» та цибулею."
         },
         {
           "img_src": "images/main/menu/burgers/heavy-punch.jpg",
           "price": "140₴",
           "name": "Важкий удар",
           "weight": "470",
-          "calories": "510"
+          "calories": "510",
+          "composition": [
+            "Пшенична булочка",
+            "Котлета з яловичини",
+            "Сир Чеддер",
+            "Мариновані огірки",
+            "Свіжі помідори",
+            "Листя салату"
+          ],
+          "description": "Соковита котлета з яловичини, танучий сир Чеддер, хрустке листя салату, соковиті помідори та пікантні мариновані огірки, об'єднані в ніжній пшеничній булочці."
         },
         {
           "img_src": "images/main/menu/burgers/eternal-classic.jpg",
           "price": "122₴",
           "name": "Вічна класика",
           "weight": "450",
-          "calories": "380"
+          "calories": "380",
+          "composition": [
+            "Пшенична булочка",
+            "Котлета з яловичини",
+            "Сир Емменталь",
+            "Мариновані огірки",
+            "Свіжі помідори",
+            "Листя салату"
+          ],
+          "description": "Котлета з яловичини у поєднанні з сиром Емменталь створюють неперевершений дует. А листя салату, помідори та мариновані огірки додають свіжості й гармонії."
         },
         {
           "img_src": "images/main/menu/burgers/italian.jpg",
           "price": "180₴",
           "name": "Італійський",
           "weight": "510",
-          "calories": "490"
+          "calories": "490",
+          "composition": [
+            "Пшенична булочка",
+            "Котлета з яловичини",
+            "Сир Моцарела",
+            "Листя салату",
+            "Соус Песто"
+          ],
+          "description": "Біфштекс з яловичини доповнений ніжним сиром Моцарела, який тане прямо в роті. Хрустке листя салату додає свіжості, а ароматний соус Песто дарує неповторний середземноморський смак."
         }
-      ]
+      ],
+      "id": "0fb2"
     },
     {
       "name": "Закуски",
@@ -121,28 +166,36 @@
           "name": "Лукові кільця",
           "weight": "160"
         }
-      ]
+      ],
+      "id": "6061"
     },
     {
-      "name": "Хот-доги"
+      "name": "Хот-доги",
+      "id": "c500"
     },
     {
-      "name": "Комбо"
+      "name": "Комбо",
+      "id": "c6c1"
     },
     {
-      "name": "Шаурма"
+      "name": "Шаурма",
+      "id": "93b6"
     },
     {
-      "name": "Піца"
+      "name": "Піца",
+      "id": "0803"
     },
     {
-      "name": "Вок"
+      "name": "Вок",
+      "id": "6729"
     },
     {
-      "name": "Десерти"
+      "name": "Десерти",
+      "id": "020f"
     },
     {
-      "name": "Соуси"
+      "name": "Соуси",
+      "id": "906c"
     }
   ],
   "requests": []

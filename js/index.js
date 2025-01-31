@@ -1,7 +1,19 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
+    const strArray = ['Кількість', 'Ціна за одиницю'];
     const freeDelivery = 600;
+    const deliveryCost = 100;
+    const basketItems = {};
+
+    let wrapperSeparateGoodsMinus, wrapperSeparateGoodsPlus;
+    let totalCostGlobal = 0;
+    let currentData = null;
+    let totalGoods = 0;
+    let handleFunction;
+    let scrollY = 0;
+    let counter = 0;
+    
     document.querySelector('.hero_p').textContent = `Безкоштовна доставка від ${freeDelivery}₴`;
 
     // NAV LIST
@@ -12,6 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (result.status !== 200) {
             throw new Error(`Could not fetch ${url}, status: ${result.status}`);
         }
+
+        return await result.json();
+    }
+
+    const postData = async (url, data) => {
+        const result = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: data
+        });
 
         return await result.json();
     }
@@ -41,8 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.remove('nav_item_active');
         });
     }
-
-    let scrollY = 0;
 
     function showModalIcon(modalSelector) {
         document.querySelector(modalSelector).style.display = 'block';
@@ -100,11 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
         goodsPlus.addEventListener('click', totalGoodsPlus);
     }
 
-    const basketItems = {};
-    let totalGoods = 0;
-    let counter = 0;
-    let totalCostGlobal = 0;
-
     function calcPriceGoods() {
         const priceField = document.querySelector('.basket__order-price > .price_field');
         let totalCost = 0;
@@ -113,16 +128,25 @@ document.addEventListener('DOMContentLoaded', () => {
             totalCost += basketItems[key][0] * basketItems[key][1];
         }
 
-        totalCostGlobal = totalCost;
-        priceField.textContent = `${totalCost}₴`;
+        totalCost += deliveryCost;
 
-        if (totalCost >= freeDelivery) {
+        if (totalCost > freeDelivery) {
+            totalCost -= deliveryCost;
             document.querySelector('.basket__details > div:last-child').classList.remove('basket__free-hide');
             document.querySelector('.basket__details > div:last-child').classList.add('basket__free-show');
+            document.querySelector('.basket__order-wrapper > div:first-child').classList.remove('basket__order-price');
+            document.querySelector('.basket__order-wrapper > div:first-child').classList.add('basket__order-delivery');
         } else {
             document.querySelector('.basket__details > div:last-child').classList.remove('basket__free-show');
             document.querySelector('.basket__details > div:last-child').classList.add('basket__free-hide');
+            document.querySelector('.basket__order-wrapper > div:first-child').classList.add('basket__order-price');
+            document.querySelector('.basket__order-wrapper > div:first-child').classList.remove('basket__order-delivery');
         }
+
+        totalCostGlobal = totalCost;
+        priceField.textContent = `${totalCost}₴`;
+
+        console.log(totalCostGlobal);
     }
 
     function createItem(img_src, name, weight, price) {
@@ -220,8 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return goodsCounter;
     }
 
-    let wrapperSeparateGoodsMinus, wrapperSeparateGoodsPlus;
-
     function calcSeparateGoodsBasket(firstSelector, secondSelector, thirdSelector, name) {
         const goodsMinus = document.querySelector(firstSelector);
         const goodsPlus = document.querySelector(secondSelector);
@@ -282,8 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(basketItems);
     }
 
-    let handleFunction;
-
     function addItemToBasket(img_src, name, weight, price) {
         const button = document.querySelector('.add_button');
 
@@ -329,11 +349,41 @@ document.addEventListener('DOMContentLoaded', () => {
         showModalIcon('#dynamic-modal');
     }
 
-    let currentData = null;
-
     getNavList()
         .then(() => {
             const navList = document.querySelectorAll('.nav_item');
+            const firstNavItem = navList[0];
+
+            if (firstNavItem) {
+                const firstIndex = firstNavItem.getAttribute('data-nav-index');
+                const cardsContainer = document.querySelector('.cards_container');
+
+                hideNavItem(navList);
+                showNavItem(navList, firstIndex);
+
+                getResource('http://localhost:3000/menu')
+                        .then(data => {
+                            currentData = data;
+                            document.querySelector('.menu_header').textContent = data[firstIndex].name;
+                            if (data[firstIndex].hasOwnProperty('items') && data[firstIndex].items.length > 0) {
+                                data[firstIndex].items.forEach((menuItem, i) => {
+                                    const { img_src, price, name, weight } = menuItem;
+                                    const fillingDivItem = `
+                                        <img class="img card_img" src=${img_src}>
+                                        <p class="p card_price">${price}</p>
+                                        <h3 class="h card_header">${name}</h3>
+                                        <p class="p card_weight">${weight}г</p>
+                                        <button data-card-index="${i}" class="button card_button">Додати</button>
+                                    `;
+                                    const divItem = document.createElement('div');
+                                    divItem.classList.add('menu_card');
+                                    divItem.innerHTML = fillingDivItem;
+                                    cardsContainer.append(divItem);
+                                });
+                            }
+                        });
+            }
+
             document.querySelector('.nav').addEventListener('click', e => {
                 const target = e.target.closest('.nav_item');
                 if (e.target && target) {
@@ -371,10 +421,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.cards_container').addEventListener('click', e => {
                 if (e.target && e.target.classList.contains('card_button')) {
                     const itemIndex = e.target.getAttribute('data-card-index');
-                    const categoryIndex = document.querySelector('.nav_item_active').getAttribute('data-nav-index'); 
-                    if (currentData) {
-                        createModalIcon(currentData, categoryIndex, itemIndex);
-                    }
+                    const categoryIndex = document.querySelector('.nav_item_active').getAttribute('data-nav-index');
+                    if (currentData) createModalIcon(currentData, categoryIndex, itemIndex);
                 }
             });
         });
@@ -429,8 +477,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleAddressBlock();
 
-    const strArray = ['Кількість', 'Ціна за одиницю'];
-
     function submitForm() {
         const form = document.querySelector('form');
 
@@ -461,16 +507,75 @@ document.addEventListener('DOMContentLoaded', () => {
             const formDataObject = Object.fromEntries(formData.entries());
 
             formDataObject.order = orderObject;
+            if (!(totalCostGlobal > freeDelivery)) formDataObject.orderDelivery = deliveryCost;
             formDataObject.orderPrice = totalCostGlobal;
 
             const json = JSON.stringify(formDataObject);
 
-            fetch('http://localhost:3000/requests', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: json
-            });
+            postData('http://localhost:3000/requests', json)
+                .then(() => showModalMessage("Дякую! Скоро ми з вами зв'яжемося"))
+                .catch(() => showModalMessage('Щось пішло не так...'))
+                .finally(() => {
+                    clearForm(form);
+                    for (let key in basketItems) {
+                        if (basketItems.hasOwnProperty(key)) {
+                          delete basketItems[key];
+                        }
+                    }
+                    clearBasket();
+                });
         });
+    }
+
+    function showModalMessage(message) {
+        const modalDialog = document.querySelector('#static-modal > .modal__dialog'),
+              newModalContent = document.createElement('div');
+        
+        modalDialog.style.display = 'none';
+        showModalIcon('#static-modal');
+
+        newModalContent.classList.add('modal__dialog');
+        newModalContent.innerHTML = `
+            <div class='modal__content modal__message-padding' style='display: flex; justify-content: center;'>
+                    <p class='p'>${message}</p>
+            </div>
+        `;
+
+        document.querySelector('#static-modal').append(newModalContent);
+
+        setTimeout(() => {
+            newModalContent.remove();
+            modalDialog.style.display = 'block';
+            hideModalIcon();
+        }, 2500);
+    }
+
+    function clearForm(form) {
+        document.querySelector('.radio__block').classList.add('radio__block-mb');
+        document.querySelector('.address__block').classList.add('hide');
+        form.reset();
+    }
+
+    function clearBasket() {
+        const basket = document.querySelector('.basket'),
+              basketDetails = document.querySelector('.basket__details'),
+              basketItems = document.querySelectorAll('.basket__item'),
+              basketOrderBlock = document.querySelector('.basket__goods + div'),
+              basketFreeBlock = document.querySelector('.basket__details > div:last-child');
+
+        basketItems.forEach(item => item.remove());
+
+        document.querySelector('.basket__goods').classList.remove('basket__goods-border');
+        document.querySelector('.basket__total').textContent = 0;
+        basketOrderBlock.classList.remove('basket__order-show');
+        basketOrderBlock.classList.add('basket__order-hide');
+        basket.classList.remove('shadow');
+        if (basketDetails.classList.contains('open')) basketDetails.classList.remove('open');
+        if (basketFreeBlock.classList.contains('basket__free-show')) {
+            basketFreeBlock.classList.remove('basket__free-show');
+            basketFreeBlock.classList.add('basket__free-hide');
+        }
+        totalGoods = 0, counter = 0, totalCostGlobal = 0;
     }
 
     submitForm();
