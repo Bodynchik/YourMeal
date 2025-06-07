@@ -2,47 +2,47 @@
   "nav": [
     {
       "title": "Бургери",
-      "img": "images/main/select/cheeseburger_icon.svg",
+      "img": "../images/main/select/cheeseburger_icon.svg",
       "id": "483c"
     },
     {
       "title": "Закуски",
-      "img": "images/main/select/onion_icon.svg",
+      "img": "../images/main/select/onion_icon.svg",
       "id": "5138"
     },
     {
       "title": "Хот-доги",
-      "img": "images/main/select/hotdog_icon.svg",
+      "img": "../images/main/select/hotdog_icon.svg",
       "id": "4446"
     },
     {
       "title": "Комбо",
-      "img": "images/main/select/fast-food_icon.svg",
+      "img": "../images/main/select/fast-food_icon.svg",
       "id": "785d"
     },
     {
       "title": "Шаурма",
-      "img": "images/main/select/burrito_icon.svg",
+      "img": "../images/main/select/burrito_icon.svg",
       "id": "fc42"
     },
     {
       "title": "Піца",
-      "img": "images/main/select/pizza_icon.svg",
+      "img": "../images/main/select/pizza_icon.svg",
       "id": "ebde"
     },
     {
       "title": "Вок",
-      "img": "images/main/select/noodles_icon.svg",
+      "img": "../images/main/select/noodles_icon.svg",
       "id": "1b43"
     },
     {
       "title": "Десерти",
-      "img": "images/main/select/doughnut_icon.svg",
+      "img": "../images/main/select/doughnut_icon.svg",
       "id": "59ad"
     },
     {
       "title": "Соуси",
-      "img": "images/main/select/ketchup_icon.svg",
+      "img": "../images/main/select/ketchup_icon.svg",
       "id": "91af"
     }
   ],
@@ -51,7 +51,7 @@
       "name": "Бургери",
       "items": [
         {
-          "img_src": "images/main/menu/burgers/meat-bomb.jpg",
+          "img_src": "../images/main/menu/burgers/meat-bomb.jpg",
           "price": "207₴",
           "name": "М'ясна бомба",
           "weight": "520",
@@ -66,7 +66,7 @@
           "description": "Супер м'ясна насолода! Велика рубана котлета зі свіжого яловичого м'яса підкорить вас своєю соковитістю, а хрумке листя салату додасть свіжості."
         },
         {
-          "img_src": "images/main/menu/burgers/super-chease.jpg",
+          "img_src": "../images/main/menu/burgers/super-chease.jpg",
           "price": "209₴",
           "name": "Супер сирний",
           "weight": "512",
@@ -81,7 +81,7 @@
           "description": "Два біфштекси із натуральної яловичини, три слайси сиру «Чедер», два шматочки маринованого огірка та свіжа цибуля, заправлені гірчицею та кетчупом, у булочці з пшеничного борошна."
         },
         {
-          "img_src": "images/main/menu/burgers/satisfying.jpg",
+          "img_src": "../images/main/menu/burgers/satisfying.jpg",
           "price": "189₴",
           "name": "Ситний",
           "weight": "580",
@@ -96,7 +96,7 @@
           "description": "Соковитий біфштекс із яловичини, доповнений хрумким беконом і маринованим огірком, у поєднанні зі шматочком сиру «Чедер» та цибулею."
         },
         {
-          "img_src": "images/main/menu/burgers/heavy-punch.jpg",
+          "img_src": "../images/main/menu/burgers/heavy-punch.jpg",
           "price": "140₴",
           "name": "Важкий удар",
           "weight": "470",
@@ -112,7 +112,7 @@
           "description": "Соковита котлета з яловичини, танучий сир Чеддер, хрустке листя салату, соковиті помідори та пікантні мариновані огірки, об'єднані в ніжній пшеничній булочці."
         },
         {
-          "img_src": "images/main/menu/burgers/eternal-classic.jpg",
+          "img_src": "../images/main/menu/burgers/eternal-classic.jpg",
           "price": "122₴",
           "name": "Вічна класика",
           "weight": "450",
@@ -128,7 +128,7 @@
           "description": "Котлета з яловичини у поєднанні з сиром Емменталь створюють неперевершений дует. А листя салату, помідори та мариновані огірки додають свіжості й гармонії."
         },
         {
-          "img_src": "images/main/menu/burgers/italian.jpg",
+          "img_src": "../images/main/menu/burgers/italian.jpg",
           "price": "180₴",
           "name": "Італійський",
           "weight": "510",
@@ -149,19 +149,19 @@
       "name": "Закуски",
       "items": [
         {
-          "img_src": "images/main/menu/snacks/nachos.jpg",
+          "img_src": "../images/main/menu/snacks/nachos.jpg",
           "price": "250₴",
           "name": "Начос",
           "weight": "220"
         },
         {
-          "img_src": "images/main/menu/snacks/french-fries.jpg",
+          "img_src": "../images/main/menu/snacks/french-fries.jpg",
           "price": "245₴",
           "name": "Картопля фрі",
           "weight": "180"
         },
         {
-          "img_src": "images/main/menu/snacks/onion-rings.jpg",
+          "img_src": "../images/main/menu/snacks/onion-rings.jpg",
           "price": "230₴",
           "name": "Лукові кільця",
           "weight": "160"
@@ -198,5 +198,46 @@
       "id": "906c"
     }
   ],
-  "requests": []
+  "requests": [
+    {
+      "id": "06aa",
+      "name": "Bohdan",
+      "telephone": "+38(067) 097-76-23",
+      "delivery": "Самовивіз",
+      "street": "",
+      "house": "",
+      "apartment": "",
+      "floor": "",
+      "order": [
+        {
+          "М'ясна бомба": {
+            "Кількість": 1,
+            "Ціна за одиницю": 207
+          }
+        }
+      ],
+      "orderDelivery": 100,
+      "orderPrice": 307
+    },
+    {
+      "id": "5d88",
+      "name": "Bohdan",
+      "telephone": "+38(067) 097-76-23",
+      "delivery": "Самовивіз",
+      "street": "",
+      "house": "",
+      "apartment": "",
+      "floor": "",
+      "order": [
+        {
+          "М'ясна бомба": {
+            "Кількість": 2,
+            "Ціна за одиницю": 207
+          }
+        }
+      ],
+      "orderDelivery": 100,
+      "orderPrice": 514
+    }
+  ]
 }

@@ -4,26 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/component.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/footer.css">
     <title>YourMeal</title>
 </head>
 
 <body>
     <header class="header">
         <div class="circle"></div>
-        <div><img class="img header_logo" src="images/header/logo.svg" alt="logo"></div>
+        <div><img class="img header_logo" src="../images/header/logo.svg" alt="logo"></div>
         <div class="hero">
             <picture>
-                <source media="(max-width: 900px)" srcset="images/header/header-pic-768.svg">
-                <img class="hero_img" src="images/header/header-pic-1920.svg" alt="hero picture">
+                <source media="(max-width: 900px)" srcset="../images/header/header-pic-768.svg">
+                <img class="hero_img" src="../images/header/header-pic-1920.svg" alt="hero picture">
             </picture>
             <div class="hero_description">
                 <h1 class="h hero_h1">Смачні бургери<br><span class="color_h1">на будь-який смак!</span></h1>
@@ -58,7 +49,7 @@
                                 <button class="button basket__order-button">Оформити замовлення</button>
                             </div>
                             <div class="basket__free-hide">
-                                <img src="images/main/modal/free-icon-delivery.svg" alt="free delivery icon">
+                                <img src="../images/main/modal/free-icon-delivery.svg" alt="free delivery icon">
                                 <p class="p ">Безкоштовна доставка</p>
                             </div>
                         </div>
@@ -77,15 +68,15 @@
             <div class="footer_info">
                 <div>
                     <picture>
-                        <source media="(max-width: 900px)" srcset="images/footer/logo-768.svg">
-                        <img src="images/footer/logo-1920.svg" alt="logo">
+                        <source media="(max-width: 900px)" srcset="../images/footer/logo-768.svg">
+                        <img src="../images/footer/logo-1920.svg" alt="logo">
                     </picture>
                 </div>
                 <div class="footer_description">
                     <div class="footer_delivery">
                         <h3 class="h footer_header">Номер для замовлення</h3>
                         <div class="footer_telephone">
-                            <img src="images/footer/telephone_icon.svg" alt="telephone icon">
+                            <img src="../images/footer/telephone_icon.svg" alt="telephone icon">
                             <p class="p telephone_number">+380 (67) 456 22-33</p>
                         </div>
                     </div>
@@ -118,10 +109,10 @@
         <div class="modal__dialog">
             <div class="modal__content modal__content-padding modal__content-flex">
                 <div class="modal__content-wrap">
-                    <img src="images/main/modal/modal-close.svg" class="modal__close">
+                    <img src="../images/main/modal/modal-close.svg" class="modal__close">
                     <h3 class="h modal__header"></h3>
                     <div class="goods__info">
-                        <img src="images/main/menu/burgers/eternal-classic.jpg" class="img goods__image">
+                        <img src="../images/main/menu/burgers/eternal-classic.jpg" class="img goods__image">
                         <div class="goods__text">
                             <p class="p goods__description"></p>
                             <p class="p goods__compound">Склад:</p>
@@ -150,8 +141,8 @@
     <div id="static-modal" class="modal">
         <div class="modal__dialog">
             <div class="modal__content modal__content-flex">
-                <img src="images/main/modal/modal-close.svg" class="modal__close">
-                <div class="modal__donut-block"><img src="images/main/modal/donut.svg"></div>
+                <img src="../images/main/modal/modal-close.svg" class="modal__close">
+                <div class="modal__donut-block"><img src="../images/main/modal/donut.svg"></div>
                 <div class="modal__delivery-block">
                     <h3 class="h modal__static-header">Доставка</h3>
                     <form action="#">
@@ -186,7 +177,6 @@
         </div>
     </div>
 
-    <script src="js/index.js"></script>
 </body>
 
 </html>
